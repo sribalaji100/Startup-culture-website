@@ -244,22 +244,22 @@ body {
 .gradient-button a {
   display: inline-block !important;
   padding: 10px 20px !important;
-  color: #fff !important;
+  color: #000000 !important;
   text-transform: capitalize;
   font-size: 15px;
-  background: rgb(19,175,240);
-  background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
+  background: #FDB92E;
+  /* background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%); */
   border-radius: 23px;
   font-weight: 500 !important;
   letter-spacing: 0.3px !important;
   transition: all .5s;
 }
 
-.gradient-button a:hover {
+/* .gradient-button a:hover {
   color: #fff !important;
   background: rgb(19,175,240);
   background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
-}
+} */
 
 .border-button a {
   display: inline-block !important;
@@ -938,6 +938,11 @@ Banner Style
 .main-banner .left-content .white-button {
   display: inline-block;
 }
+.main-banner .left-content .white-button a:hover{
+  /* background-color: #4b8ef1; */
+  color: #fff !important;
+
+}
 
 .main-banner .right-image {
   text-align: center;
@@ -950,8 +955,8 @@ Banner Style
 }
 
 .main-banner .left-content .white-button a {
-  background-color: #4b8ef1;
-  color: #fff !important;
+  background-color: #FDB92E;
+  color: #000000 !important;
 }
 
 /* 
@@ -1141,6 +1146,11 @@ About Us
 .about-us .gradient-button {
   margin-top: 30px;
   margin-bottom: 10px;
+}
+.about-us .gradient-button a:hover{
+  /* background-color: #4b8ef1; */
+  color: #fff !important;
+
 }
 
 .about-us span {
@@ -1988,8 +1998,8 @@ responsive
     margin-right: 0;
   }
   .main-banner .left-content .white-button a {
-    background-color: #4b8ef1;
-    color: #fff !important;
+    background-color: #FDB92E;
+    color: #000000 !important;
   }
   form#contact {
     overflow: hidden;
