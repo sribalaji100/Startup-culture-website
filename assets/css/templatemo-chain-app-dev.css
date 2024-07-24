@@ -1051,10 +1051,13 @@ Services Style
   margin-bottom: 20px;
 }
 
-.service-item:hover h4,
-.service-item:hover p,
+.service-item:hover h4
 .service-item:hover .text-button a {
-  color: #fff;
+  color: #000000;
+}
+.service-item:hover p{
+  color:#fff;
+
 }
 
 .first-service .icon {
@@ -1091,7 +1094,7 @@ Services Style
 }
 
 .service-item:hover {
-  background-image: url(../images/service-bg.jpg);
+  background-image: url(../images/service-bg2.jpeg);
   background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
