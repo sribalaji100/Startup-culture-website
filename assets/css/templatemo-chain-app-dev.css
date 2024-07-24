@@ -187,7 +187,7 @@ body {
 
 .section-heading h4 em {
   font-style: normal;
-  color: #4b8ef1;
+  color: #FDB92E;
 }
 
 .section-heading img {
@@ -316,11 +316,12 @@ header
 .background-header .nav li a.active:after {
   position: absolute;
   width: 100%;
-  height: 1px;
-  background-color: #4b8ef1;
+  height: 3px;
+  background-color: #000;
   content: '';
   left: 50%;
-  bottom: -20px;
+  border-radius: 5px;
+  bottom: 0px;
   transform: translateX(-50%);
 }
 
@@ -428,7 +429,7 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #4b8ef1!important;
+  color: #fdb92e!important;
 }
 
 .header-area .main-nav .nav li:last-child a.active {
@@ -437,7 +438,7 @@ header
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #4b8ef1!important;
+  color: #fdb92e!important;
   opacity: 1;
 }
 
@@ -639,7 +640,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #4b8ef1;
+  color: #fdb92e;
 }
 
 @media (max-width: 1200px) {
@@ -901,7 +902,8 @@ Banner Style
 
 .main-banner:after {
   content: '';
-  background-image: url(../images/slider-left-dec.png);
+  /* background-image: url(../images/slider-left-dec.png); */
+  /* assets */
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -983,7 +985,8 @@ Services Style
 
 .services:after {
   content: '';
-  background-image: url(../images/services-left-dec.png);
+  /* background-image: url(../images/services-left-dec.png); */
+/* assets */
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
@@ -995,7 +998,8 @@ Services Style
 
 .services:before {
   content: '';
-  background-image: url(../images/services-right-dec.png);
+  /* background-image: url(../images/services-right-dec.png); */
+  /* assets */
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
@@ -1120,18 +1124,18 @@ About Us
 }
 
 .about-us .box-item {
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   padding: 10px 30px;
-  background-color: #fff;
-  border-radius: 40px;
+  background-color: #fdb92e;
+  border-radius: 5px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
-.about-us .box-item h4 a {
+.about-us .box-item p{
   font-size: 20px;
   font-weight: 700;
-  margin-top: 8px;
-  color: #2a2a2a;
+    color: #ffffff;
   transition: all .3s;
 }
 
@@ -1164,7 +1168,8 @@ About Us
 }
 
 .about-us:after {
-  background-image: url(../images/about-bg.jpg);
+  /* background-image: url(../images/about-bg.jpg); */
+  /* assets */
   width: 777px;
   height: 1132px;
   content: '';
