@@ -676,12 +676,12 @@ h6 {
   /* --background-color: color-mix(in srgb, var(--accent-color), transparent 95%); */
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 25px 0;
+  padding: 15px 0;
   position: fixed;
   inset: 0;
   z-index: 9999;
   width: 100%;
-  height: 80px;
+  height: fit-content;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -694,7 +694,7 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
   font-size: 14px;
 }
@@ -1346,6 +1346,7 @@ section,
   top: 120px; /* Adjust this value as needed */
 }
 
+
 .service-details .services-list a {
   display: block;
   line-height: 1;
@@ -1366,6 +1367,9 @@ section,
   border-color: var(--accent-color);
 }
 
+.service-details #service-content{
+  padding: 0 20px;
+}
 .service-details .services-img {
   margin-bottom: 20px;
 }

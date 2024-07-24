@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -50,7 +50,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -112,13 +112,13 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -127,8 +127,8 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -155,7 +155,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -173,7 +173,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -217,38 +217,156 @@ const serviceContent = document.getElementById('service-content');
 
 const contentData = {
   'backing-startups': `
-    <h3>Backing Startups</h3>
-    <p>
-      Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-    </p>
+     <h3>Backing Startups</h3><br>
+
     <ul>
-      <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-      <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-      <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Startup Mentorship and Advisory</span></li>
     </ul>
-    <p>
-      Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Gain valuable insights and guidance from experienced entrepreneurs who can help navigate the complexities of launching and scaling your startup. Our advisory services are tailored to foster growth and innovation at every stage of your journey.
     </p>
-    <p>
-      Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Startup Health Monitor</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Keep your business on track with our Startup Health Monitor, a comprehensive tool designed to assess vital metrics and performance indicators, ensuring you stay ahead of potential challenges and maintain robust growth.
     </p>
-  `,
+    
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span>Product Development Support for Startups</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Accelerate your product development with expert support that transforms your vision into reality. Our team specializes in fine-tuning your product strategy and optimizing your development process for maximum impact.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Funding Assistance</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Secure the necessary funding to propel your startup forward. We provide strategic guidance on accessing venture capital, grants, and angel investments, aligning your financial needs with the right funding opportunities.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Valuation Support</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Determine the true value of your startup with our professional valuation services. We offer detailed analysis and expert advice to help you understand your company’s worth and position it attractively for investors.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Pitch Deck & Projection Creation</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Capture the attention of investors with a compelling pitch deck crafted by our experts. We focus on highlighting your startup’s unique value proposition, market potential, and growth strategy to secure the funding you need.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Strategic Management - MSME</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Tailor your strategic management practices to the unique needs of your MSME. Our services are designed to streamline operations, enhance competitive advantage, and drive sustainable business growth.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Brand Positioning</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Enhance your startup’s market presence and sales performance with our targeted support. We specialize in crafting customized marketing strategies and sales plans that resonate with your audience, driving growth and increasing revenue efficiently.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">COX Building & Co-Founder Dating</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      We empower individuals by enhancing their leadership and business skills, and we facilitate connections with complementary co-founders to foster successful partnerships.
+    </p>
+`,
+
   'incubation-centers': `
-    <h3>Incubation centers</h3>
-    <p>
-      Detailed content about Software Development.
+    <h3>Incubation Centers</h3><br>
+    
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Establishing Incubation Center</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Kickstart your incubation center with a solid foundation designed to nurture early-stage startups. We focus on creating an ecosystem that supports innovation, providing the necessary resources and mentorship to foster entrepreneurial success.
     </p>
-  `,
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Structuring Incubation Center</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Design an effective structure for your incubation center that optimizes resource allocation and maximizes support for resident startups. Our approach ensures a balanced mix of technology, talent, and strategic guidance to facilitate rapid growth and development.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Scaling Incubation Center</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Expand the reach and impact of your incubation center globally with strategies tailored for growth. We help you scale operations efficiently, enhancing your capacity to support more startups and increasing the overall effectiveness of your programs.
+    </p>
+`,
+
   'corporate-consortium': `
-    <h3>Corporate consortium</h3>
-    <p>
-      Detailed content about Product Management.
+    <h3>Corporate Consortium</h3><br>
+    
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Forge Strategic Partnerships and Collaborations</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Corporates actively collaborate with startups to co-develop products and explore new markets, leveraging the innovative prowess of startups to enhance their product offerings and operational efficiency.
     </p>
-  `,
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Invest in and Acquire Innovative Startups</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Corporates strategically invest in or acquire startups to integrate cutting-edge technologies and entrepreneurial talent into their existing business frameworks, enhancing their competitive edge and fostering continuous innovation.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Establish Corporate-Sponsored Incubators and Accelerators</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Corporates initiate and support incubator and accelerator programs that equip startups with essential resources, mentorship, and industry insights to accelerate their development and align their innovations with corporate strategic goals.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Implement Licensing and Technology Transfer Agreements</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Corporates execute licensing agreements with startups to utilize breakthrough technologies, facilitating rapid integration into their operations and broadening their technological capabilities.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Integrate Startups into Corporate Supply Chains</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Corporates incorporate startups into their supply chains, leveraging innovative products or services to enhance their offerings, while providing startups with significant growth and scaling opportunities.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Provide Mentorship and Share Expertise</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Corporates offer targeted mentorship and share valuable industry expertise with startups, aiding them in overcoming business challenges and scaling effectively, while staying abreast of emerging trends and innovations.
+    </p>
+
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Leverage CSR Initiatives to Support Startups</span></li>
+    </ul>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      Corporates deploy CSR funds and initiatives to support startups that align with their social and environmental goals. By backing socially responsible startups, corporates not only foster innovation but also contribute to their CSR objectives, creating shared value and impacting the community positively.
+    </p>
+`,
+
   'greentrack-initiative': `
-    <h3>Greentrack Initiative</h3>
-    <p>
-      Detailed content about Graphic Design.
+    <h3>Greentrack Initiative</h3><br>
+    <p style="color: #000000bd;font-family: 'Raleway';">
+      The <span style="font-weight:800;">Green Track Initiative</span> is our commitment to fostering sustainable startups that prioritize environmental responsibility and innovative green technologies. Through this initiative, we support startups dedicated to creating eco-friendly solutions that address critical environmental challenges. Our goal is to cultivate a new generation of businesses that not only drive economic growth but also contribute to a sustainable future for our planet. Join us on the Green Track and be part of a movement towards a greener, cleaner world.
+      <br>
+      <span style="font-weight:800;">How we do it ?</span>
     </p>
   `,
   'marketing': `
