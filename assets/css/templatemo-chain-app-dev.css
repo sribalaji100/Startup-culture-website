@@ -902,7 +902,7 @@ Banner Style
 
 .main-banner:after {
   content: '';
-  /* background-image: url(../images/slider-left-dec.png); */
+  background-image: url(../images/homebg.png);
   /* assets */
   background-repeat: no-repeat;
   background-size: contain;
@@ -1051,10 +1051,12 @@ Services Style
   margin-bottom: 20px;
 }
 
-.service-item:hover h4,
-.service-item:hover p,
+.service-item:hover h4
 .service-item:hover .text-button a {
   color: #fff;
+}
+.service-item:hover p{
+  color: #000;
 }
 
 .first-service .icon {
@@ -1091,7 +1093,7 @@ Services Style
 }
 
 .service-item:hover {
-  background-image: url(../images/service-bg.jpg);
+  background-image: url(../images/service-bg1.jpeg);
   background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
