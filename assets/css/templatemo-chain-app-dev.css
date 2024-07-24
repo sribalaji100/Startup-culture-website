@@ -1588,7 +1588,7 @@ Footer Style
 */
 
 footer {
-  background-image: url(../images/footer-bg.png);
+  /* background-image: url(../images/footer-bg.png); */
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
