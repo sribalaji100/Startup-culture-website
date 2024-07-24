@@ -347,33 +347,7 @@ https://templatemo.com/tm-570-chain-app-dev
     </div>
   </div> -->
 
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-    <span class="modal-close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption" class="modal-caption"></div>
-  </div>
 
-  <script>
-    const modal = document.getElementById("myModal");
-    const modalImg = document.getElementById("img01");
-    const captionText = document.getElementById("caption");
-    const galleryImages = document.querySelectorAll(".gallery img, .imgs img");
-
-    galleryImages.forEach(img => {
-      img.onclick = function () {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-      }
-    });
-
-    const span = document.getElementsByClassName("modal-close")[0];
-
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-  </script>
   <div id="pricing" class="pricing-tables">
     <div class="container">
       <div class="section-heading">
