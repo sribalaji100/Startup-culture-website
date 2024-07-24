@@ -211,3 +211,67 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+const servicesList = document.querySelectorAll('.services-list a');
+const serviceContent = document.getElementById('service-content');
+
+const contentData = {
+  'web-design': `
+    <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img">
+    <h3>Web Design</h3>
+    <p>
+      Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+    </p>
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+    </ul>
+    <p>
+      Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+    </p>
+    <p>
+      Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+    </p>
+  `,
+  'software-development': `
+    <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img">
+    <h3>Software Development</h3>
+    <p>
+      Detailed content about Software Development.
+    </p>
+  `,
+  'product-management': `
+    <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img">
+    <h3>Product Management</h3>
+    <p>
+      Detailed content about Product Management.
+    </p>
+  `,
+  'graphic-design': `
+    <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img">
+    <h3>Graphic Design</h3>
+    <p>
+      Detailed content about Graphic Design.
+    </p>
+  `,
+  'marketing': `
+    <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img">
+    <h3>Marketing</h3>
+    <p>
+      Detailed content about Marketing.
+    </p>
+  `
+};
+
+servicesList.forEach(service => {
+  service.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    servicesList.forEach(s => s.classList.remove('active'));
+    service.classList.add('active');
+
+    const contentKey = service.getAttribute('data-content');
+    serviceContent.innerHTML = contentData[contentKey];
+  });
+});

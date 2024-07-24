@@ -673,11 +673,19 @@ h6 {
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-  --background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  /* --background-color: color-mix(in srgb, var(--accent-color), transparent 95%); */
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 25px 0;
-  position: relative;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  
+
+
+  
 }
 
 .page-title h1 {
@@ -1336,6 +1344,9 @@ section,
   padding: 10px 30px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   margin-bottom: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px; /* Adjust this value as needed */
 }
 
 .service-details .services-list a {
