@@ -216,9 +216,8 @@ const servicesList = document.querySelectorAll('.services-list a');
 const serviceContent = document.getElementById('service-content');
 
 const contentData = {
-  'web-design': `
-    <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img">
-    <h3>Web Design</h3>
+  'backing-startups': `
+    <h3>Backing Startups</h3>
     <p>
       Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
     </p>
@@ -234,35 +233,34 @@ const contentData = {
       Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
     </p>
   `,
-  'software-development': `
-    <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img">
-    <h3>Software Development</h3>
+  'incubation-centers': `
+    <h3>Incubation centers</h3>
     <p>
       Detailed content about Software Development.
     </p>
   `,
-  'product-management': `
-    <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img">
-    <h3>Product Management</h3>
+  'corporate-consortium': `
+    <h3>Corporate consortium</h3>
     <p>
       Detailed content about Product Management.
     </p>
   `,
-  'graphic-design': `
-    <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img">
-    <h3>Graphic Design</h3>
+  'greentrack-initiative': `
+    <h3>Greentrack Initiative</h3>
     <p>
       Detailed content about Graphic Design.
     </p>
   `,
   'marketing': `
-    <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img">
     <h3>Marketing</h3>
     <p>
       Detailed content about Marketing.
     </p>
   `
 };
+
+// Set initial content to Web Design
+serviceContent.innerHTML = contentData['backing-startups'];
 
 servicesList.forEach(service => {
   service.addEventListener('click', (e) => {
