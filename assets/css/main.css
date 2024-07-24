@@ -17,6 +17,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 40px;
 }
 .profile-card-2 {
     width: 300px;
@@ -42,7 +43,7 @@
 
 }
 .cardbg:hover {
-    background-image: url(../images/service-bg.jpg);
+    background-image: url(../images/teambg.jpeg);
     background-position: right top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,7 +72,7 @@
 .profile-card-2 .profile-designation {
     margin-top: 10px;
     font-size: 16px;
-    color: #FDB92E;
+    color: #000000 !important;
     transition: all linear 0.25s;
 }
 .profile-card-2 .profile-icons {
@@ -93,7 +94,7 @@
     -webkit-text-fill-color: transparent;
 }
 .profile-card-2 .profile-icons .fa-linkedin {
-    color: #0077B5;
+    color: #0077B5 !important;
 }
 .profile-card-2 .profile-icons .fa:hover {
     transform: scale(1.3);
