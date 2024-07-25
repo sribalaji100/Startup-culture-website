@@ -709,6 +709,9 @@ h6 {
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
+.page-title .breadcrumbs ol li a:hover {
+  color: var(--heading-color);
+}
 
 /*--------------------------------------------------------------
 # Global Sections
