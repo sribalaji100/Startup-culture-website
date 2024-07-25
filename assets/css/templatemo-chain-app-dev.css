@@ -1074,11 +1074,11 @@ Services Style
 }
 
 .fourth-service .icon {
-  background-image: url(../images/service-icon-04.png);
+  background-image: url(../images/serviceicon/leaf1.png);
 }
 
 .fourth-service:hover .icon {
-  background-image: url(../images/service-icon-hover-04.png);
+  background-image: url(../images/serviceicon/leaf.png);
 }
 
 .service-item:hover {
