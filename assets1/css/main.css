@@ -709,9 +709,6 @@ h6 {
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
-.page-title .breadcrumbs ol li a:hover {
-  color: var(--heading-color);
-}
 
 /*--------------------------------------------------------------
 # Global Sections
@@ -1503,6 +1500,13 @@ section,
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120vh;
-  margin-top: 220px;
+  height: 130vh;
+  margin-top: 100px;
+}
+.tit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  padding-bottom: 5px;
 }
