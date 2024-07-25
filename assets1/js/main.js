@@ -235,7 +235,7 @@ const contentData = {
     </p>
     
     <ul>
-      <li><i class="bi bi-check-circle"></i> <span>Product Development Support for Startups</span></li>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Product Development Support for Startups</span></li>
     </ul>
     <p style="color: #000000bd;font-family: 'Raleway';">
       Accelerate your product development with expert support that transforms your vision into reality. Our team specializes in fine-tuning your product strategy and optimizing your development process for maximum impact.
