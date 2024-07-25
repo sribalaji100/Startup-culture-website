@@ -946,8 +946,9 @@ Banner Style
   display: inline-block;
 }
 .main-banner .left-content .white-button a:hover{
-  /* background-color: #4b8ef1; */
-  color: #fff !important;
+  background-color: #000000;
+  color:#FDB92E  !important;
+  border: 2px solid #fff;
 
 }
 
@@ -962,8 +963,9 @@ Banner Style
 }
 
 .main-banner .left-content .white-button a {
-  background-color: #FDB92E;
+  background-color: #ffffff;
   color: #000000 !important;
+  border: 2px solid #FDB92E;
 }
 
 /* 
@@ -2000,7 +2002,7 @@ responsive
     margin-right: 0;
   }
   .main-banner .left-content .white-button a {
-    background-color: #FDB92E;
+    background-color: #ffffff;
     color: #000000 !important;
   }
   form#contact {
