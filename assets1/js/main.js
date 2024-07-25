@@ -219,6 +219,9 @@ document.addEventListener('DOMContentLoaded', () => {
 const contentData = {
   'backing-startups': `
      <h3>Backing Startups</h3><br>
+    <div style="width: 100%; text-align: center;">
+      <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img" style="width: 70%; display: block; margin: 0 auto;">
+    </div> 
 
     <ul>
       <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Startup Mentorship and Advisory</span></li>
