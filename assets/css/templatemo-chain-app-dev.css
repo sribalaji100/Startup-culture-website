@@ -1022,8 +1022,8 @@ Services Style
   margin-left: 0px;
   margin-bottom: 30px;
   background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
   transition: all .3s;
 }
 
@@ -1049,36 +1049,37 @@ Services Style
 }
 
 .first-service .icon {
-  background-image: url(../images/service-icon-01.png);
+  background-image: url(../images/serviceicon/career1.png);
 }
 
 .first-service:hover .icon {
-  background-image: url(../images/service-icon-hover-01.png);
+  background-image: url(../images/serviceicon/career2.png);
 }
 
 .second-service .icon {
-  background-image: url(../images/service-icon-02.png);
+  background-image: url(../images/serviceicon/business1.png);
 }
 
 .second-service:hover .icon {
-  background-image: url(../images/service-icon-hover-02.png);
+  background-image: url(../images/serviceicon/business2.png);
 }
 
 
 .third-service .icon {
-  background-image: url(../images/service-icon-03.png);
+  background-image: url(../images/serviceicon/team1.png);
+  
 }
 
 .third-service:hover .icon {
-  background-image: url(../images/service-icon-hover-03.png);
+  background-image: url(../images/serviceicon/team2.png);
 }
 
 .fourth-service .icon {
-  background-image: url(../images/serviceicon/leaf1.png);
+  background-image: url(../images/serviceicon/leaves1.png);
 }
 
 .fourth-service:hover .icon {
-  background-image: url(../images/serviceicon/leaf.png);
+  background-image: url(../images/serviceicon/leaves2.png);
 }
 
 .service-item:hover {
