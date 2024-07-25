@@ -22,7 +22,7 @@
 .profile-card-2 {
     width: 300px;
     /* background-color: #000000; */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.2);
     background-position: center;
     overflow: hidden;
     position: relative;

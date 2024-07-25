@@ -2153,6 +2153,8 @@ responsive
   .service-item {
     text-align: center;
     padding: 30px;
+    margin: 10px;
+    box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.2);
   }
   .menu .thumb span.category {
     display: none;
