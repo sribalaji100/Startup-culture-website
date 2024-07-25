@@ -70,16 +70,58 @@
             </div>
         </div>
 
-        <div class="tit">
-            <h4><span style="font-size: larger; font-weight: 5000;"><span style="color: #FDB92E;">Enquiry </span>Form</span></h4>
+        <div class="section-heading" style="margin-top: 150px;">
+            <h4> <em>Enquiry </em>Form</h4>
+            <!-- <img src="assets/images/heading-line-dec.png" alt=""> -->
+            <hr style="width:50%;text-align:center;margin: 0 auto  ;">
+
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore
+              magna.</p> -->
         </div>
         <hr style="width:40%;text-align:center;margin: 0 auto  ;">
 
-        <div class="googleform">
-            <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSeT6n7aOtvmZJTBatc7cduYPjDl4XrNi3vTz3lrmuhM4YlvlQ/viewform?embedded=true"
-            width="740" height="1250" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div class="row">
+            <div class="iframe-container">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSeT6n7aOtvmZJTBatc7cduYPjDl4XrNi3vTz3lrmuhM4YlvlQ/viewform?embedded=true"
+                    frameborder="0" marginheight="0" marginwidth="0" id="google-form-iframe">Loading…</iframe>
+            </div>
         </div>
+
+        <style>
+            .iframe-container {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 56.25%;
+                /* Aspect ratio (16:9) */
+                margin: auto;
+                
+            }
+            .iframe-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+            @media (max-width: 767px) {
+                .iframe-container {
+                    padding-bottom: 150%;
+                    /* Adjust aspect ratio for mobile view */
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                .iframe-container {
+                    padding-bottom: 100%;
+                    /* Adjust aspect ratio for tablet view */
+                }
+            }
+        </style>
+
     </main>
     <footer id="footer" class="footer position-relative">
 
