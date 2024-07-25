@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const contentData = {
   'backing-startups': `
      <h3>Backing Startups</h3><br>
-    <div style="width: 100%; text-align: center;">
+    <div style="width: 100%;">
       <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img" style="width: 70%; display: block; margin: 0 auto;">
     </div> 
 
