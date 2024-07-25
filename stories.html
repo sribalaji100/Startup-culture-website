@@ -98,30 +98,30 @@
           document.addEventListener('DOMContentLoaded', () => {
             const startupList = document.querySelectorAll('.startup-list a');
             const storiesContent = document.getElementById('stories-content');
-            
+      
             const contentData = {
-  'gaiaa-sustainable-solutions': `
-    <h3>Gaiaa Sustainable Solutions Pvt Ltd</h3><br>
-    <p>Details about Gaiaa Sustainable Solutions Pvt Ltd...</p>
-  `,
-  'socio-potents': `
-    <h3>Socio Potents</h3><br>
-    <p>Details about Socio Potents...</p>
-  `,
-  'beyound-sustainability-network': `
-    <h3>Beyond Sustainability Network</h3><br>
-    <p>Details about Beyond Sustainability Network...</p>
-  `,
-  'natal-cares': `
-    <h3>Natal Cares</h3><br>
-    <p>Details about Natal Cares...</p>
-  `,
-  'homaid-services': `
-    <h3>HOMAID Services</h3><br>
-    <p>Details about HOMAID Services...</p>
-  `
-};
-
+              'gaiaa-sustainable-solutions': `
+                <h3>Gaiaa Sustainable Solutions Pvt Ltd</h3><br>
+                <p>Details about Gaiaa Sustainable Solutions Pvt Ltd...</p>
+              `,
+              'socio-potents': `
+                <h3>Socio Potents</h3><br>
+                <p>Details about Socio Potents...</p>
+              `,
+              'beyound-sustainability-network': `
+                <h3>Beyond Sustainability Network</h3><br>
+                <p>Details about Beyond Sustainability Network...</p>
+              `,
+              'natal-cares': `
+                <h3>Natal Cares</h3><br>
+                <p>Details about Natal Cares...</p>
+              `,
+              'homaid-services': `
+                <h3>HOMAID Services</h3><br>
+                <p>Details about HOMAID Services...</p>
+              `
+            };
+      
             const loadContent = (story) => {
               if (contentData[story]) {
                 storiesContent.innerHTML = contentData[story];
@@ -133,12 +133,12 @@
                 storiesContent.innerHTML = contentData['gaiaa-sustainable-solutions'];
               }
             };
-        
+      
             // Initial load based on URL parameter
             const urlParams = new URLSearchParams(window.location.search);
             const storyParam = urlParams.get('story');
             loadContent(storyParam || 'gaiaa-sustainable-solutions');
-        
+      
             // Add click event listeners to story links
             startupList.forEach(story => {
               story.addEventListener('click', (e) => {
@@ -215,6 +215,15 @@
                 href="service-details.html?service=corporate-consortium">Corporate consortium</a></li>
             <li><i class="bi bi-chevron-right"></i> <a
                 href="service-details.html?service=greentrack-initiative">Greentrack Initiative</a></li>
+          </ul>
+          <hr>
+          <h4 style="text-align: left;">Our Stories</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="stories.html?story=gaiaa-sustainable-solutions" data-content="gaiaa-sustainable-solutions">The Gaiaa Sustainable Solutions Pvt Ltd</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="stories.html?story=socio-potents" data-content="socio-potents">Socio Potents</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="stories.html?story=beyound-sustainability-network" data-content="beyound-sustainability-network">Beyond Sustainability Network</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="stories.html?story=natal-cares" data-content="natal-cares">Natal Cares</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="stories.html?story=homaid-services" data-content="homaid-services">HOMAID Services</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-12">
