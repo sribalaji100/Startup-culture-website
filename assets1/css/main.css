@@ -1423,6 +1423,104 @@ section,
   text-align: center;
   margin-bottom: 20px;
 }
+
+/*--------------------------------------------------------------
+# Startup Details Section
+--------------------------------------------------------------*/
+.startup-details .startup-list {
+  background-color: var(--surface-color);
+  padding: 20px 30px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  margin-bottom: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px; /* Adjust this value as needed */
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 992px) {
+  .startup-details .startup-list {
+    position: fixed;
+    top: 135px; /* Adjust this value based on the height of your header */
+    width: 100%;
+    right: 0;
+  }
+
+  #stories-content {
+    margin-top: 350px; /* Adjust this value based on the height of your header and startup list */
+  }
+}
+
+.startup-details .startup-list a {
+  display: block;
+  line-height: 1;
+  padding: 8px 0 8px 15px;
+  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  margin: 20px 0;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  transition: 0.3s;
+}
+
+.startup-details .startup-list a.active {
+  color: var(--heading-color);
+  font-weight: 700;
+  border-color: var(--accent-color);
+}
+
+.startup-details .startup-list a:hover {
+  border-color: var(--accent-color);
+}
+
+.startup-details #stories-content {
+  padding: 0 20px;
+}
+
+.startup-details .services-img {
+  margin-bottom: 20px;
+}
+
+.startup-details h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.startup-details h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.startup-details p {
+  font-size: 15px;
+}
+
+.startup-details ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.startup-details ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.startup-details ul i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
+/* start up details ends */
+
+
+.section-heading h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
 .gallery img {
   width: 100%;
   height: auto;

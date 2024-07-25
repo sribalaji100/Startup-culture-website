@@ -15,7 +15,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +38,7 @@
 
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
 
   <!-- =======================================================
   * Template Name: Ninestars
@@ -47,10 +49,10 @@
   ======================================================== -->
 </head>
 
-<body class="service-details-page">
+<body class="startup-details-page">
 
 
-   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
   <main class="main">
 
     <!-- Page Title -->
@@ -71,27 +73,84 @@
     </div>
 
     <!-- Service Details Section -->
-    <section id="service-details" class="service-details section header-sticky wow">
+    <section id="startup-details" class="startup-details section header-sticky wow">
 
       <div class="container">
         <div class="row">
-          <div class="col-lg-4" data-aos="fade-right" data-aos-delay="50" >
-            <div class="services-list active" >
+          <div class="col-lg-4" data-aos="fade-right" data-aos-delay="50">
+            <div class="startup-list active">
               <h4>OUR STORIES</h4>
-              <a href="#" data-content="backing-startups">Backing Startups</a>
-              <a href="#" data-content="incubation-centers">Incubation centers</a>
-              <a href="#" data-content="corporate-consortium">Corporate consortium</a>
-              <a href="#" data-content="greentrack-initiative">Greentrack Initiative</a>
-              <!-- <a href="#" data-content="marketing">Marketing</a> -->
+              <a href="#" data-content="gaiaa-sustainable-solutions">The Gaiaa Sustainable Solutions Pvt Ltd</a>
+              <a href="#" data-content="socio-potents">Socio Potents</a>
+              <a href="#" data-content="beyound-sustainability-network">Beyond Sustainability Network</a>
+              <a href="#" data-content="natal-cares">Natal Cares</a>
+              <a href="#" data-content="homaid-services">HOMAID Services</a>
             </div>
           </div>
-    
+        
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="600">
-            <div id="service-content">
-              <!-- <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img"> -->
+            <div id="stories-content">
+              <!-- Dynamic content will be loaded here -->
             </div>
           </div>
         </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const startupList = document.querySelectorAll('.startup-list a');
+            const storiesContent = document.getElementById('stories-content');
+            
+            const contentData = {
+  'gaiaa-sustainable-solutions': `
+    <h3>Gaiaa Sustainable Solutions Pvt Ltd</h3><br>
+    <p>Details about Gaiaa Sustainable Solutions Pvt Ltd...</p>
+  `,
+  'socio-potents': `
+    <h3>Socio Potents</h3><br>
+    <p>Details about Socio Potents...</p>
+  `,
+  'beyound-sustainability-network': `
+    <h3>Beyond Sustainability Network</h3><br>
+    <p>Details about Beyond Sustainability Network...</p>
+  `,
+  'natal-cares': `
+    <h3>Natal Cares</h3><br>
+    <p>Details about Natal Cares...</p>
+  `,
+  'homaid-services': `
+    <h3>HOMAID Services</h3><br>
+    <p>Details about HOMAID Services...</p>
+  `
+};
+
+            const loadContent = (story) => {
+              if (contentData[story]) {
+                storiesContent.innerHTML = contentData[story];
+                startupList.forEach(s => s.classList.remove('active'));
+                document.querySelector(`[data-content="${story}"]`).classList.add('active');
+                history.pushState(null, '', `?story=${story}`);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              } else {
+                storiesContent.innerHTML = contentData['gaiaa-sustainable-solutions'];
+              }
+            };
+        
+            // Initial load based on URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const storyParam = urlParams.get('story');
+            loadContent(storyParam || 'gaiaa-sustainable-solutions');
+        
+            // Add click event listeners to story links
+            startupList.forEach(story => {
+              story.addEventListener('click', (e) => {
+                e.preventDefault();
+                const contentKey = story.getAttribute('data-content');
+                loadContent(contentKey);
+              });
+            });
+          });
+        </script>
+        
+    
       </div>
 
     </section><!-- /Service Details Section -->
@@ -120,19 +179,25 @@
             <span class="sitename">Startup Culture</span>
           </a>
           <div class="footer-contact pt-3">
-            <p style="color: #000000bd;font-family: 'Raleway';"><strong>Rathinam Techzone, Eachanari, Madukkarai, </strong></p>
-            <p style="color: #000000bd;font-family: 'Raleway';" ><strong>Tamil Nadu - 64102</strong> </p>
-            <p class="mt-3" style="color: #000000bd;font-family: 'Raleway';"><strong>Phone: <span>+91 96986 69937</span></strong> </p>
-            <p style="color: #000000bd;font-family: 'Raleway';"><strong>Email: </strong> <a href="mailto:director@startupculturefoundation.in" style="font-size: 15px;">director@startupculturefoundation.in</a></p>
+            <p style="color: #000000bd;font-family: 'Raleway';"><strong>Rathinam Techzone, Eachanari, Madukkarai,
+              </strong></p>
+            <p style="color: #000000bd;font-family: 'Raleway';"><strong>Tamil Nadu - 64102</strong> </p>
+            <p class="mt-3" style="color: #000000bd;font-family: 'Raleway';"><strong>Phone: <span>+91 96986
+                  69937</span></strong> </p>
+            <p style="color: #000000bd;font-family: 'Raleway';"><strong>Email: </strong> <a
+                href="mailto:director@startupculturefoundation.in"
+                style="font-size: 15px;">director@startupculturefoundation.in</a></p>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Menu</h4>
           <ul>
-            <li class="scroll-to-section"><i class="bi bi-chevron-right"></i><a href="index.html" class="active">Home</a></li>
+            <li class="scroll-to-section"><i class="bi bi-chevron-right"></i><a href="index.html"
+                class="active">Home</a></li>
             <li class="scroll-to-section"><i class="bi bi-chevron-right"></i><a href="index.html#about">About</a></li>
-            <li class="scroll-to-section"><i class="bi bi-chevron-right"></i><a href="index.html#services">What We Do</a></li>
+            <li class="scroll-to-section"><i class="bi bi-chevron-right"></i><a href="index.html#services">What We
+                Do</a></li>
             <li class="scroll-to-section"><i class="bi bi-chevron-right"></i><a href="gallery.html">Gallery</a></li>
             <li class="scroll-to-section"><i class="bi bi-chevron-right"></i><a href="stories.html">Stories</a></li>
             <li class="scroll-to-section"><i class="bi bi-chevron-right"></i><a href="#footer">Contact us</a></li>
@@ -142,20 +207,28 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>What We Do</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?service=backing-startups">Backing Startups</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?service=incubation-centers">Incubation centers</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?service=corporate-consortium">Corporate consortium</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?service=greentrack-initiative">Greentrack Initiative</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?service=backing-startups">Backing
+                Startups</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="service-details.html?service=incubation-centers">Incubation
+                centers</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a
+                href="service-details.html?service=corporate-consortium">Corporate consortium</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a
+                href="service-details.html?service=greentrack-initiative">Greentrack Initiative</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-12">
           <h4>Follow Us</h4>
           <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
           <div class="social-links d-flex">
-            <a href="https://youtube.com/@startupculture01?feature=shared" target="_blank"><i class="bi bi-youtube"></i></a>
-            <a href="https://www.facebook.com/startupculturecbe?mibextid=ZbWKwL" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/startup__culture?igsh=ZzNmYXhpaHgyaGw5" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/startupculture01/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com/@startupculture01?feature=shared" target="_blank"><i
+                class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/startupculturecbe?mibextid=ZbWKwL" target="_blank"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/startup__culture?igsh=ZzNmYXhpaHgyaGw5" target="_blank"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/startupculture01/" target="_blank"><i
+                class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
@@ -177,7 +250,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <!-- <div id="preloader"></div> -->
