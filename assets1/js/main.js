@@ -212,8 +212,9 @@
 
 })();
 
-const servicesList = document.querySelectorAll('.services-list a');
-const serviceContent = document.getElementById('service-content');
+document.addEventListener('DOMContentLoaded', () => {
+  const servicesList = document.querySelectorAll('.services-list a');
+  const serviceContent = document.getElementById('service-content');
 
 const contentData = {
   'backing-startups': `
@@ -377,17 +378,45 @@ const contentData = {
   `
 };
 
-// Set initial content to Web Design
-serviceContent.innerHTML = contentData['backing-startups'];
+// // Set initial content to Web Design
+// serviceContent.innerHTML = contentData['backing-startups'];
 
+// servicesList.forEach(service => {
+//   service.addEventListener('click', (e) => {
+//     e.preventDefault();
+
+//     servicesList.forEach(s => s.classList.remove('active'));
+//     service.classList.add('active');
+
+//     const contentKey = service.getAttribute('data-content');
+//     serviceContent.innerHTML = contentData[contentKey];
+//   });
+
+
+
+const loadContent = (service) => {
+  if (contentData[service]) {
+    serviceContent.innerHTML = contentData[service];
+    servicesList.forEach(s => s.classList.remove('active'));
+    document.querySelector(`[data-content="${service}"]`).classList.add('active');
+    history.pushState(null, '', `?service=${service}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    serviceContent.innerHTML = contentData['backing-startups'];
+  }
+};
+
+// Initial load based on URL parameter
+const urlParams = new URLSearchParams(window.location.search);
+const serviceParam = urlParams.get('service');
+loadContent(serviceParam || 'backing-startups');
+
+// Add click event listeners to service links
 servicesList.forEach(service => {
   service.addEventListener('click', (e) => {
     e.preventDefault();
-
-    servicesList.forEach(s => s.classList.remove('active'));
-    service.classList.add('active');
-
     const contentKey = service.getAttribute('data-content');
-    serviceContent.innerHTML = contentData[contentKey];
+    loadContent(contentKey);
   });
+});
 });
