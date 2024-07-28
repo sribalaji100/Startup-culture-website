@@ -219,9 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const contentData = {
   'backing-startups': `
      <h3>Backing Startups</h3><br>
-    <div style="width: 100%;">
-      <img src="assets1/img/services.jpg" alt="" class="img-fluid services-img" style="width: 70%; display: block; margin: 0 auto;">
-    </div> 
+    
 
     <ul>
       <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Startup Mentorship and Advisory</span></li>
@@ -316,28 +314,28 @@ const contentData = {
     <h3>Corporate Consortium</h3><br>
     
     <ul>
-      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Forge Strategic Partnerships and Collaborations</span></li>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Forge Strategic Partnerships &amp; Collaborations</span></li>
     </ul>
     <p style="color: #000000bd;font-family: 'Raleway';">
       Corporates actively collaborate with startups to co-develop products and explore new markets, leveraging the innovative prowess of startups to enhance their product offerings and operational efficiency.
     </p>
 
     <ul>
-      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Invest in and Acquire Innovative Startups</span></li>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Invest in &amp; Acquire Innovative Startups</span></li>
     </ul>
     <p style="color: #000000bd;font-family: 'Raleway';">
       Corporates strategically invest in or acquire startups to integrate cutting-edge technologies and entrepreneurial talent into their existing business frameworks, enhancing their competitive edge and fostering continuous innovation.
     </p>
 
     <ul>
-      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Establish Corporate-Sponsored Incubators and Accelerators</span></li>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Establish Corporate-Sponsored Incubators &amp; Accelerators</span></li>
     </ul>
     <p style="color: #000000bd;font-family: 'Raleway';">
       Corporates initiate and support incubator and accelerator programs that equip startups with essential resources, mentorship, and industry insights to accelerate their development and align their innovations with corporate strategic goals.
     </p>
 
     <ul>
-      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Implement Licensing and Technology Transfer Agreements</span></li>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Implement Licensing &amp; Technology Transfer Agreements</span></li>
     </ul>
     <p style="color: #000000bd;font-family: 'Raleway';">
       Corporates execute licensing agreements with startups to utilize breakthrough technologies, facilitating rapid integration into their operations and broadening their technological capabilities.
@@ -351,7 +349,7 @@ const contentData = {
     </p>
 
     <ul>
-      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Provide Mentorship and Share Expertise</span></li>
+      <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">Provide Mentorship &amp; Share Expertise</span></li>
     </ul>
     <p style="color: #000000bd;font-family: 'Raleway';">
       Corporates offer targeted mentorship and share valuable industry expertise with startups, aiding them in overcoming business challenges and scaling effectively, while staying abreast of emerging trends and innovations.
