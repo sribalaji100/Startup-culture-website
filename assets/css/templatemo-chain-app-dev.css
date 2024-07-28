@@ -2357,3 +2357,67 @@ responsive
   }
   .marquee:before, .marquee:after { width: 5rem; }
 }
+
+
+:root {
+  --client-marquee-width: 80vw;
+  --client-marquee-height: 20vh;
+  --client-marquee-elements-displayed: 5;
+  --client-marquee-element-width: calc(var(--client-marquee-width) / var(--client-marquee-elements-displayed));
+  --client-marquee-animation-duration: calc(var(--client-marquee-elements) * 3s);
+}
+.client-marquee {
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-top: 6%;
+  position: relative;
+}
+
+.client-marquee:before, .client-marquee:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+.client-marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: client-scrolling var(--client-marquee-animation-duration) linear infinite;
+}
+
+.client-marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes client-scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--client-marquee-element-width) * var(--client-marquee-elements))); }
+}
+
+.client-marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: var(--client-marquee-element-width);
+  max-height: 100%;
+  white-space: nowrap;
+}
+
+.client-marquee-content li img {
+  width: 60%;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --client-marquee-width: 100vw;
+    --client-marquee-height: 16vh;
+    --client-marquee-elements-displayed: 3;
+  }
+  .client-marquee:before, .client-marquee:after { width: 5rem; }
+}
